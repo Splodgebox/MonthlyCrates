@@ -1,0 +1,6 @@
+name: MonthlyCrates
+version: @version@
+main: net.splodgebox.monthlycrates.MonthlyCrates
+api-version: 1.13
+authors: [Splodgebox]
+description: MonthlyCrate plugin as seen on cosmicpvp

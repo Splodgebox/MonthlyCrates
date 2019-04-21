@@ -1,0 +1,45 @@
+Crates:
+  example:
+    title: "&e&lExample Crate"
+    material: "ENDER_CHEST"
+    name: "&e&l*** &eExample Crate &e&l***"
+    lore:
+      - '&eUnlocked at buy.store.com by &n%player%'
+      - ''
+      - '&f&l&nADMIN ITEMS'
+      - '&f&l* &fAdmin Item'
+      - ''
+      - '&e&l&nCOSMETIC ITEMS'
+      - '&e&l* &eCosmetic Item'
+      - ''
+      - '&6&l&nENCHANTMENT ITEMS'
+      - '&6&l* &6Enchantment Item'
+      - ''
+      - '&c&l&nBONUS ITEMS'
+      - '&c&l* &cBonus Item'
+    rewards:
+      1:
+        chance: 50
+        material: "DIRT"
+        name: "&c&lDirt"
+        lore:
+          - 'This is a really cool dirt'
+        command: "give %player% dirt"
+        give_item: false
+      2:
+        chance: 60
+        material: "DIAMOND"
+        name: "&c&lDIAMOND"
+        lore:
+          - 'This is a really cool dirt'
+        command: "give %player% diamond"
+        give_item: false
+      bonus-rewards:
+        1:
+          chance: 50
+          material: "DIRT"
+          name: "&c&lDirt"
+          lore:
+            - 'This is a really cool dirt'
+          command: "give %player% dirt"
+          give_item: false
