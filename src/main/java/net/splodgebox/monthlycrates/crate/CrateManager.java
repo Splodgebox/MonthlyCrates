@@ -50,7 +50,7 @@ public class CrateManager {
                 .setName(name)
                 .setLore(lore)
                 .nbt()
-                .set("MonthlyCrate", name)
+                .set("MonthlyCrate", getName())
                 .set("DontStackPlz", String.valueOf(UUID.randomUUID()))
                 .build();
     }

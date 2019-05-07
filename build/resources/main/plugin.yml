@@ -1,5 +1,5 @@
 name: MonthlyCrates
-version: 1.0-SNAPSHOT
+version: BETA
 main: net.splodgebox.monthlycrates.MonthlyCrates
 api-version: 1.13
 authors: [Splodgebox]
