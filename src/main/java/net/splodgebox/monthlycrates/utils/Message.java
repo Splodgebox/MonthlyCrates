@@ -27,7 +27,8 @@ public enum Message {
     GIVEN_CRATE("&6&l(!) &eYou have given &6%player% &ex%amount% of &6%crate%&e crates!"),
     MUST_BE_PLAYER("&c&l(!) &cYou must be a player to execute this command!"),
     CANNOT_ADD_AIR("&c&l(!) &cYou cannot add air to a crate!"),
-    ADDED_REWARD("&a&l(!) &aReward added!");
+    ADDED_REWARD("&a&l(!) &aReward added!"),
+    NOT_ENOUGH_REWARDS("&C&L(!) &CThis crate does not contain enough rewards! [Min: 9]");
 
     private String path;
     private String msg;

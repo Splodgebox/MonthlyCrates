@@ -19,7 +19,7 @@ Crates:
       - '&c&l* &cBonus Item'
     bonus-rewards:
       1:
-        chance: 50
+        chance: 50.0
         material: "DIRT"
         name: "&c&lBonus Reward"
         lore:
@@ -28,7 +28,7 @@ Crates:
         give_item: false
     rewards:
       1:
-        chance: 50
+        chance: 50.0
         material: "DIRT"
         name: "&c&lDirt"
         lore:
@@ -36,7 +36,7 @@ Crates:
         command: "give %player% dirt"
         give_item: false
       2:
-        chance: 60
+        chance: 60.0
         material: "DIAMOND"
         name: "&c&lDIAMOND"
         lore:

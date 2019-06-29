@@ -2,7 +2,7 @@
   <library name="Gradle: co.aikar:acf-paper:0.5.0-SNAPSHOT">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/930682545cd9f92fc4002e12b50d066eacac70aa/acf-paper-0.5.0-SNAPSHOT.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/5c956d62323ad36f453f721263a6c4c452e929ff/acf-paper-0.5.0-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/8a1a0841ae1e83bc22919a80d1a8a0a1fc00a4af/acf-paper-0.5.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -10,6 +10,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/4f8749f673f50ce0146f548b750ae8f4caf2a601/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/5c543eb4398e119274e73da0728ae099751c0ff1/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/71a1577acc42404f7a761ff43e1e1073ad0620ca/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/2ccd99654c4bf8ae36fa155e194bde7cbebd08a8/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/60f4495c34c9fb3e005b4ec27f0bf67500ca10c2/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/f921755b85a196de0b9fd27250699f7bd29b80b6/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
