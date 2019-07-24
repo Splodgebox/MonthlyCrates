@@ -17,6 +17,10 @@ Crates:
       - ''
       - '&c&l&nBONUS ITEMS'
       - '&c&l* &cBonus Item'
+    animation:
+      colors:
+        - 'BLUE_STAINED_GLASS_PANE'
+      shuffle-time: 5
     bonus-rewards:
       1:
         chance: 50.0

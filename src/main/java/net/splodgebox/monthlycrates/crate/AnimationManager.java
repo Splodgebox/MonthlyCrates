@@ -67,14 +67,30 @@ public class AnimationManager {
     };
 
     public void init() {
-        plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> rewardManagers.add(new RewardManager(
-                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
-                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
-                plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
-                plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
-                plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
-                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
-        )));
+        colorList = getPlugin().crates.getConfiguration().getStringList("Crates." + crate + ".animation.colors");
+        try {
+            plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> rewardManagers.add(new RewardManager(
+                    plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
+                    Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
+                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
+                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
+                    plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
+                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
+                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".enchants"),
+                    plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
+            )));
+        } catch (NullPointerException e) {
+            plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> rewardManagers.add(new RewardManager(
+                    plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
+                    Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
+                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
+                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
+                    plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
+                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
+                    null,
+                    plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
+            )));
+        }
         rewardManagers.forEach(rewardManager -> rewards.add(rewardManager.getChance(), rewardManager));
 
         animationSlots.put(12, new Integer[]{3, 39, 48, 9, 10, 11, 15, 16, 17});
@@ -125,12 +141,15 @@ public class AnimationManager {
             @Override
             public void run() {
                 try {
-                    RewardManager rewardManager = rewards.getRandomValue();
+                    RewardManager rewardManager = rewards.next();
                     inventory.setItem(slot, rewardManager.getItemStack(), (player, inventoryClickEvent) -> {
                     });
                     if (integer.get() == 9) {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
                                 rewardManager.getCommand().replace("%player%", player.getName()));
+                        if (rewardManager.isGiveItem()) {
+                            player.getInventory().addItem(rewardManager.getItemStack());
+                        }
                         setCompletedRewards(getCompletedRewards() + 1);
                         if (getCompletedRewards() == 9) {
                             setCompleted(true);
@@ -161,48 +180,18 @@ public class AnimationManager {
     }
 
     public void addPanes(int slot) {
+        int amount = 0;
         for (Integer integers : animationSlots.get(slot)) {
-            ThreadLocalRandom random = ThreadLocalRandom.current();
-            int amount = random.nextInt(1, 5);
-            switch (amount) {
-                case 1:
-                    inventory.setItem(
-                            integers,
-                            new ItemStackBuilder(XMaterial.CYAN_STAINED_GLASS_PANE.parseItem())
-                                    .setName(" ")
-                                    .build(),
-                            (player1, inventoryClickEvent) -> {
-                            }
-                    );
-                    break;
-                case 2:
-                    inventory.setItem(
-                            integers,
-                            new ItemStackBuilder(XMaterial.WHITE_STAINED_GLASS_PANE.parseItem())
-                                    .setName(" ")
-                                    .build(), (player1, inventoryClickEvent) -> {
-                            }
-                    );
-                    break;
-                case 3:
-                    inventory.setItem(
-                            integers,
-                            new ItemStackBuilder(XMaterial.BLUE_STAINED_GLASS_PANE.parseItem())
-                                    .setName(" ")
-                                    .build(), (player1, inventoryClickEvent) -> {
-                            }
-                    );
-                    break;
-                case 4:
-                    inventory.setItem(
-                            integers,
-                            new ItemStackBuilder(XMaterial.PINK_STAINED_GLASS_PANE.parseItem())
-                                    .setName(" ")
-                                    .build(), (player1, inventoryClickEvent) -> {
-                            }
-                    );
-                    break;
-            }
+            if (amount == colorList.size()) amount = 0;
+            String color = colorList.get(amount);
+            inventory.setItem(
+                    integers,
+                    new ItemStackBuilder(XMaterial.valueOf(color).parseItem())
+                            .setName(" ")
+                            .build(), (player1, inventoryClickEvent) -> {
+                    }
+            );
+            amount++;
         }
     }
 
@@ -211,27 +200,36 @@ public class AnimationManager {
     private boolean redeemed;
 
     public void finalReward() {
-        setPanes(10, "CYAN_STAINED_GLASS_PANE");
-        setPanes(20, "WHITE_STAINED_GLASS_PANE");
-        setPanes(30, "BLUE_STAINED_GLASS_PANE");
-        setPanes(40, "PINK_STAINED_GLASS_PANE");
-        setPanes(50, "CYAN_STAINED_GLASS_PANE");
-        setPanes(60, "WHITE_STAINED_GLASS_PANE");
-        setPanes(70, "BLUE_STAINED_GLASS_PANE");
-        setPanes(80, "PINK_STAINED_GLASS_PANE");
-        setPanes(100, "GRAY_STAINED_GLASS_PANE");
+        setPanes();
         RandomCollection<RewardManager> randomCollection = new RandomCollection<>();
         for (String string : Objects.requireNonNull(plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".bonus-rewards")).getKeys(false)) {
-            randomCollection.add(
-                    plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                    new RewardManager(
-                            plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                            Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
-                            plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
-                            plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
-                            plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
-                            plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
-                    ));
+            try {
+                randomCollection.add(
+                        plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
+                        new RewardManager(
+                                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
+                                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
+                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
+                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".lore"),
+                                plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
+                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
+                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".enchants"),
+                                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
+                        ));
+            } catch (NullPointerException e) {
+                randomCollection.add(
+                        plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
+                        new RewardManager(
+                                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
+                                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
+                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
+                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".lore"),
+                                plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
+                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
+                                null,
+                                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
+                        ));
+            }
         }
         new BukkitRunnable() {
             @Override
@@ -242,14 +240,14 @@ public class AnimationManager {
                                 .addLore("&7bonus reward")
                                 .build(), (player1, inventoryClickEvent) -> {
                             if (isCompleted() && !isRedeemed()) {
-                                RewardManager rewardManager = randomCollection.getRandomValue();
+                                RewardManager rewardManager = randomCollection.next();
                                 inventory.setItem(49, rewardManager.getItemStack(), (player2, inventoryClickEven2) -> {
                                 });
                                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
                                         rewardManager.getCommand()
                                                 .replace("%player%", player.getName()));
                                 if (rewardManager.isGiveItem()) {
-                                    player.getInventory().addItem(randomCollection.getRandomValue().getItemStack());
+                                    player.getInventory().addItem(rewardManager.getItemStack());
                                 }
                                 setRedeemed(true);
                                 playerList.remove(player.getUniqueId());
@@ -267,24 +265,44 @@ public class AnimationManager {
         }.runTaskLater(getPlugin(), 110L);
     }
 
-    public void setPanes(long delay, String material) {
+    public void setPanes() {
         new BukkitRunnable() {
+            int timer = getPlugin().crates.getConfiguration().getInt("Crates." + crate + ".animation.shuffle-time");
+            int amount = 0;
             @Override
             public void run() {
+                if (timer == 0){
+                    for (int[] integer : columns) {
+                        for (Integer integers : integer) {
+                            inventory.setItem(
+                                    integers,
+                                    new ItemStackBuilder(XMaterial.GRAY_STAINED_GLASS_PANE.parseItem())
+                                            .setName(" ")
+                                            .build(), (player1, inventoryClickEvent) -> {}
+                            );
+                        }
+                    }
+                    cancel();
+                    return;
+                }
+                if (amount == colorList.size()) amount = 0;
+                String color = colorList.get(amount);
                 for (int[] integer : columns) {
                     for (Integer integers : integer) {
                         inventory.setItem(
                                 integers,
-                                new ItemStackBuilder(XMaterial.valueOf(material).parseItem())
+                                new ItemStackBuilder(XMaterial.valueOf(color).parseItem())
                                         .setName(" ")
-                                        .build(),
-                                (player1, inventoryClickEvent) -> {
-                                }
+                                        .build(), (player1, inventoryClickEvent) -> {}
                         );
                     }
                 }
+                amount++;
+                timer--;
             }
-        }.runTaskLater(MonthlyCrates.getInstance(), delay);
+        }.runTaskTimer(getPlugin(), 20L, 20l);
     }
+
+    public List<String> colorList;
 
 }

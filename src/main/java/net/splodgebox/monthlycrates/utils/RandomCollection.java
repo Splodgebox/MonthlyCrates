@@ -6,23 +6,32 @@ import java.util.NavigableMap;
 import java.util.Random;
 import java.util.TreeMap;
 
+import java.util.NavigableMap;
+import java.util.TreeMap;
+import java.util.Random;
+
 public class RandomCollection<E> {
-    private final NavigableMap<Double, E> map = new TreeMap<>();
-    private final Random random = new Random();
+    private final NavigableMap<Double, E> map = new TreeMap<Double, E>();
+    private final Random random;
     private double total = 0;
 
-    public void add(double weight, @NonNull E value) {
-        if (weight > 0) {
-            total += weight;
-            map.put(total, value);
-        }
+    public RandomCollection() {
+        this(new Random());
     }
 
-    @NonNull
-    public E getRandomValue() {
-        if (total == 0) throw new RuntimeException("Trying to get a random value from an empty RandomCollection");
-        final double value = random.nextDouble() * total;
-        return map.higherEntry(value).getValue();
+    public RandomCollection(Random random) {
+        this.random = random;
+    }
+
+    public void add(double weight, E result) {
+        if (weight <= 0) return;
+        total += weight;
+        map.put(total, result);
+    }
+
+    public E next() {
+        double value = random.nextDouble() * total;
+        return map.ceilingEntry(value).getValue();
     }
 
     public void clear(){
