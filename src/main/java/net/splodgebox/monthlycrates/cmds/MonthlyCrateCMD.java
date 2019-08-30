@@ -33,8 +33,8 @@ public class MonthlyCrateCMD extends BaseCommand {
             Message.INVALID_CRATE.msg(commandSender);
             return;
         }
-        CrateManager crateManager = new CrateManager(crate, player.getPlayer());
-        IntStream.range(0, amount).forEach(i -> player.getPlayer().getInventory().addItem(crateManager.getItemStack()));
+        CrateManager crateManager = new CrateManager(crate, MonthlyCrates.getInstance());
+        IntStream.range(0, amount).forEach(i -> player.getPlayer().getInventory().addItem(crateManager.getItemStack(player.getPlayer().getName())));
         String message = Message.GIVEN_CRATE.toString()
                 .replace("%player%", player.getPlayer().getName())
                 .replace("%amount%", String.valueOf(amount))
@@ -65,6 +65,7 @@ public class MonthlyCrateCMD extends BaseCommand {
     public void reloadConfiguration(CommandSender commandSender){
         MonthlyCrates.getInstance().crates.reload();
         MonthlyCrates.getInstance().lang.reload();
+        MonthlyCrates.getInstance().loadCrates();
         Message.CONFIGURATION_RELOAD.msg(commandSender);
     }
 

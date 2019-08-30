@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import net.splodgebox.monthlycrates.MonthlyCrates;
-import net.splodgebox.monthlycrates.utils.Chat;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
 import net.splodgebox.monthlycrates.utils.RandomCollection;
 import net.splodgebox.monthlycrates.utils.XMaterial;
@@ -18,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
@@ -68,29 +66,8 @@ public class AnimationManager {
 
     public void init() {
         colorList = getPlugin().crates.getConfiguration().getStringList("Crates." + crate + ".animation.colors");
-        try {
-            plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> rewardManagers.add(new RewardManager(
-                    plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
-                    Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
-                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
-                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
-                    plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
-                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
-                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".enchants"),
-                    plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
-            )));
-        } catch (NullPointerException e) {
-            plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> rewardManagers.add(new RewardManager(
-                    plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
-                    Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
-                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
-                    plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
-                    plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
-                    plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
-                    null,
-                    plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
-            )));
-        }
+        rewardManagers = Lists.newArrayList();
+        rewardManagers.addAll(MonthlyCrates.getRewardMap().get(crate));
         rewardManagers.forEach(rewardManager -> rewards.add(rewardManager.getChance(), rewardManager));
 
         animationSlots.put(12, new Integer[]{3, 39, 48, 9, 10, 11, 15, 16, 17});
@@ -202,35 +179,18 @@ public class AnimationManager {
     public void finalReward() {
         setPanes();
         RandomCollection<RewardManager> randomCollection = new RandomCollection<>();
-        for (String string : Objects.requireNonNull(plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".bonus-rewards")).getKeys(false)) {
-            try {
-                randomCollection.add(
+        Objects.requireNonNull(plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".bonus-rewards")).getKeys(false).forEach(string -> randomCollection.add(
+                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
+                new RewardManager(
                         plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                        new RewardManager(
-                                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
-                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
-                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".lore"),
-                                plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
-                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
-                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".enchants"),
-                                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
-                        ));
-            } catch (NullPointerException e) {
-                randomCollection.add(
-                        plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                        new RewardManager(
-                                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".bonus-rewards." + string + ".chance"),
-                                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
-                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
-                                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".lore"),
-                                plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
-                                plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
-                                null,
-                                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
-                        ));
-            }
-        }
+                        Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".material")),
+                        plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".name"),
+                        plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".lore"),
+                        plugin.crates.getConfiguration().getInt("Crates." + crate + ".bonus-rewards." + string + ".amount"),
+                        plugin.crates.getConfiguration().getString("Crates." + crate + ".bonus-rewards." + string + ".command"),
+                        plugin.crates.getConfiguration().getStringList("Crates." + crate + ".bonus-rewards." + string + ".enchants"),
+                        plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".bonus-rewards." + string + ".give_item")
+                )));
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -269,16 +229,18 @@ public class AnimationManager {
         new BukkitRunnable() {
             int timer = getPlugin().crates.getConfiguration().getInt("Crates." + crate + ".animation.shuffle-time");
             int amount = 0;
+
             @Override
             public void run() {
-                if (timer == 0){
+                if (timer == 0) {
                     for (int[] integer : columns) {
                         for (Integer integers : integer) {
                             inventory.setItem(
                                     integers,
                                     new ItemStackBuilder(XMaterial.GRAY_STAINED_GLASS_PANE.parseItem())
                                             .setName(" ")
-                                            .build(), (player1, inventoryClickEvent) -> {}
+                                            .build(), (player1, inventoryClickEvent) -> {
+                                    }
                             );
                         }
                     }
@@ -293,7 +255,8 @@ public class AnimationManager {
                                 integers,
                                 new ItemStackBuilder(XMaterial.valueOf(color).parseItem())
                                         .setName(" ")
-                                        .build(), (player1, inventoryClickEvent) -> {}
+                                        .build(), (player1, inventoryClickEvent) -> {
+                                }
                         );
                     }
                 }

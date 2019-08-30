@@ -1,6 +1,7 @@
 package net.splodgebox.monthlycrates.crate;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -8,42 +9,33 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 public class RewardManager {
 
     @Getter
-    private double chance;
+    private final double chance;
 
     @Getter
-    private Material material;
+    private final Material material;
 
     @Getter
-    private String name;
+    private final String name;
 
     @Getter
-    private int amount;
+    private final List<String> lore;
 
     @Getter
-    private String command;
+    private final int amount;
 
     @Getter
-    private List<String> enchants;
+    private final String command;
 
     @Getter
-    private boolean giveItem;
+    private final List<String> enchants;
 
     @Getter
-    private List<String> lore;
+    private final boolean giveItem;
 
-    public RewardManager(double chance, Material material, String name, List<String> lore, int amount, String command, List<String> enchants, boolean giveItem){
-        this.chance = chance;
-        this.material = material;
-        this.name = name;
-        this.lore = lore;
-        this.amount = amount;
-        this.command = command;
-        this.enchants = enchants;
-        this.giveItem = giveItem;
-    }
 
     public ItemStack getItemStack(){
         ItemStack itemStack = new ItemStackBuilder(material)
