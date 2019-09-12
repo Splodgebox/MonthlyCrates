@@ -28,7 +28,8 @@ public enum Message {
     MUST_BE_PLAYER("&c&l(!) &cYou must be a player to execute this command!"),
     CANNOT_ADD_AIR("&c&l(!) &cYou cannot add air to a crate!"),
     ADDED_REWARD("&a&l(!) &aReward added!"),
-    NOT_ENOUGH_REWARDS("&C&L(!) &CThis crate does not contain enough rewards! [Min: 9]");
+    NOT_ENOUGH_REWARDS("&C&L(!) &CThis crate does not contain enough rewards! [Min: 9] OR You can enable duplicate rewards"),
+    INVENTORY_FULL("&c&l(!) &cYour inventory was full so your item was dropped on the floor!");
 
     private String path;
     private String msg;

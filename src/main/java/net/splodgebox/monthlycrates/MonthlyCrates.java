@@ -10,6 +10,7 @@ import net.splodgebox.monthlycrates.crate.RewardManager;
 import net.splodgebox.monthlycrates.crate.events.PlayerEvents;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.Message;
+import net.splodgebox.monthlycrates.utils.Metrics;
 import net.splodgebox.monthlycrates.utils.gui.GuiListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -41,6 +42,7 @@ public final class MonthlyCrates extends JavaPlugin {
         commandManager.registerCommand(new MonthlyCrateCMD());
         commandManager.registerCommand(new CosmicCrateCommand());
         commandManager.getCommandCompletions().registerCompletion("crates", c -> crates.getConfiguration().getConfigurationSection("Crates").getKeys(false));
+        Metrics metrics = new Metrics(this);
 
         new BukkitRunnable() {
             @Override

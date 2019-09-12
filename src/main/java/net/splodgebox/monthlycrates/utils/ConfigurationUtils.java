@@ -1,6 +1,5 @@
 package net.splodgebox.monthlycrates.utils;
 
-import co.aikar.commands.annotation.Single;
 import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -51,10 +50,7 @@ public class ConfigurationUtils {
     }
 
     public int getLength(ConfigurationSection section) {
-        int length = 0;
-        for (String key : section.getKeys(false)) {
-            length++;
-        }
+        int length = section.getKeys(false).size();
         return length + 1;
     }
 

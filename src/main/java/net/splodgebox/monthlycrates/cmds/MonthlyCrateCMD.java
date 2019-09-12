@@ -8,6 +8,7 @@ import net.splodgebox.monthlycrates.crate.CrateManager;
 import net.splodgebox.monthlycrates.utils.Chat;
 import net.splodgebox.monthlycrates.utils.ConfigurationUtils;
 import net.splodgebox.monthlycrates.utils.Message;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -42,16 +43,38 @@ public class MonthlyCrateCMD extends BaseCommand {
         Chat.msg(commandSender, message);
     }
 
+    @Subcommand("giveall")
+    @CommandPermission("monthlycrate.giveall")
+    public void giveEveryoneCrate(CommandSender commandSender, String crate, boolean dropItem, String message) {
+        if (!MonthlyCrates.getInstance().crates.getConfiguration()
+                .getConfigurationSection("Crates").getKeys(false).contains(crate)) {
+            Message.INVALID_CRATE.msg(commandSender);
+            return;
+        }
+        CrateManager crateManager = new CrateManager(crate, MonthlyCrates.getInstance());
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            if (dropItem) {
+                if (player.getInventory().firstEmpty() == -1)
+                    player.getLocation().getWorld().dropItem(player.getLocation(),
+                            crateManager.getItemStack(player.getName()));
+                else player.getInventory().addItem(crateManager.getItemStack(player.getName()));
+            } else {
+                player.getInventory().addItem(crateManager.getItemStack(player.getName()));
+            }
+        }
+        Bukkit.broadcastMessage(Chat.color(message));
+    }
+
     @Subcommand("addreward")
     @CommandPermission("monthlycrate.addreward")
-    public void addReward(CommandSender commandSender, String crate, boolean giveItem, double chance, String command){
-        if (commandSender instanceof ConsoleCommandSender){
+    public void addReward(CommandSender commandSender, String crate, boolean giveItem, double chance, String command) {
+        if (commandSender instanceof ConsoleCommandSender) {
             Message.MUST_BE_PLAYER.msg(commandSender);
             return;
         }
         Player player = (Player) commandSender;
         ItemStack itemStack = player.getInventory().getItemInHand();
-        if (itemStack.getType() == Material.AIR){
+        if (itemStack.getType() == Material.AIR) {
             Message.CANNOT_ADD_AIR.msg(player);
             return;
         }
@@ -62,7 +85,7 @@ public class MonthlyCrateCMD extends BaseCommand {
 
     @Subcommand("reload")
     @CommandPermission("monthlycrate.reload")
-    public void reloadConfiguration(CommandSender commandSender){
+    public void reloadConfiguration(CommandSender commandSender) {
         MonthlyCrates.getInstance().crates.reload();
         MonthlyCrates.getInstance().lang.reload();
         MonthlyCrates.getInstance().loadCrates();

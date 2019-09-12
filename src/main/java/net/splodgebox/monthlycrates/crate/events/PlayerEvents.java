@@ -40,7 +40,9 @@ public class PlayerEvents implements Listener {
             if (nbtItem.hasKey("MonthlyCrate")) {
                 String crate = nbtItem.getString("MonthlyCrate");
                 if (MonthlyCrates.getInstance().crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).size() < 9) {
-                    Message.NOT_ENOUGH_REWARDS.msg(player);
+                    if (!MonthlyCrates.getInstance().crates.getConfiguration().getBoolean("Crates." + crate + ".animation.duplicate-rewards")) {
+                        Message.NOT_ENOUGH_REWARDS.msg(player);
+                    }
                     return;
                 }
                 if (nbtItem.getItem().getAmount() > 1) return;
@@ -53,7 +55,6 @@ public class PlayerEvents implements Listener {
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
-        Player player = event.getPlayer();
         ItemStack itemStack = event.getItemInHand();
         if (itemStack == null || itemStack.getType() == Material.AIR) return;
         NBTItem nbtItem = new NBTItem(itemStack);

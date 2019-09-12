@@ -132,9 +132,11 @@ public class AnimationManager {
                             setCompleted(true);
                             finalReward();
                         }
-                        rewardManagers.remove(rewardManager);
-                        rewards.clear();
-                        rewardManagers.forEach(rewardManagerr -> rewards.add(rewardManagerr.getChance(), rewardManagerr));
+                        if (!getPlugin().crates.getConfiguration().getBoolean("Crates." + crate + ".animation.duplicate-rewards")) {
+                            rewardManagers.remove(rewardManager);
+                            rewards.clear();
+                            rewardManagers.forEach(rewardManagerr -> rewards.add(rewardManagerr.getChance(), rewardManagerr));
+                        }
                         cancel();
                         Arrays.stream(animationSlots.get(slot)).forEach(integers -> inventory.setItem(integers,
                                 new ItemStackBuilder(XMaterial.GRAY_STAINED_GLASS_PANE.parseItem()).setName(" ").build(),
@@ -149,8 +151,7 @@ public class AnimationManager {
                     });
                     Arrays.stream(animationSlots.get(slot)).forEach(integers -> inventory.setItem(integers,
                             new ItemStackBuilder(XMaterial.GRAY_STAINED_GLASS_PANE.parseItem()).setName(" ").build(),
-                            (player, inventoryClickEvent) -> {
-                            }));
+                            (player, inventoryClickEvent) -> {}));
                 }
             }
         }.runTaskTimer(plugin, 0L, 10L);

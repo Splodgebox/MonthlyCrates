@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="734a955d-939e-49e9-91fd-c9c5afd37661" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Metrics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -10,33 +11,50 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_bukkit_0_5_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_bukkit_0_5_0_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_core_0_5_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_core_0_5_0_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_paper_0_5_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_paper_0_5_0_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spigotmc_spigot_api_1_13_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/RewardManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ConfigurationUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/MonthlyCrates.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/MonthlyCrates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/CrateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/CrateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/RewardManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/RewardManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/events/PlayerEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/events/PlayerEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Chat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ConfigurationUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ConfigurationUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Message.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/MonthlyCrates-BETA-all.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/MonthlyCrates-BETA-all.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/java-compiler-args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/java-compiler-args.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/RewardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/RewardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/events/PlayerEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/events/PlayerEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ConfigurationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ConfigurationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/crates.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/crates.yml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -74,33 +92,6 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="269" column="100" selection-start-line="269" selection-start-column="100" selection-end-line="269" selection-end-column="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#14178#14439#0" expanded="true" />
-                <element signature="e#14438#14439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/crates.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -123,116 +114,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Chat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/XMaterial.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/NBTFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ItemStackBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/ClickAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/CloseAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/GuiItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/GuiListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/Gui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/CratesManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/NBTCompound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/CrateManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/events/PlayerEvents.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/RewardManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ConfigurationUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/crates.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java" />
-      </list>
-    </option>
-  </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="165" />
-    <option name="y" value="-8" />
-    <option name="width" value="1280" />
-    <option name="height" value="729" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="monthlycrates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="monthlycrates" type="462c0819:PsiDirectoryNode" />
-              <item name="crate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="monthlycrates" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonthlyCrates" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonthlyCrates" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1QPXhSAUtk7wCwLy1OzhreB1C3c" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -240,8 +125,11 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553979102692" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -355,315 +243,27 @@
       <workItem from="1563797006466" duration="1595000" />
       <workItem from="1563903372144" duration="176000" />
       <workItem from="1563960706591" duration="2935000" />
+      <workItem from="1567673334122" duration="294000" />
+      <workItem from="1567814548070" duration="2053000" />
+      <workItem from="1568288985401" duration="1557000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40749000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15884861" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3277592" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32850242" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Statistic" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Codota" order="10" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="919">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/ClassWrapper.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTCompound.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTContainer.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTEntity.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTFile.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTItem.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTList.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTListCompound.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTReflectionUtil.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTTileEntity.java" />
-    <entry file="file://$USER_HOME$/Downloads/Item-NBT-API-master 3/item-nbt-api/src/main/java/de/tr7zw/itemnbtapi/NBTType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/NBTFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/utils/GsonWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/utils/MinecraftVersion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/ClickAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/CloseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/GuiItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/CratesManager.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/c6b00ea035738cd6c9a9dd1bf4d06a15fea507f6/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/scheduler/BukkitRunnable.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="147" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/nbt/NBTCompound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/gui/GuiListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spigotmc/spigot-api/1.13.2-R0.1-SNAPSHOT/48552e3f17cc218b89980ac8b0ee73032dbc6f0a/spigot-api-1.13.2-R0.1-SNAPSHOT-sources.jar!/org/bukkit/configuration/MemorySection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/lang.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/CrateManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/events/PlayerEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ItemStackBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#329#340#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ConfigurationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/RewardManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/XMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="437" column="14" selection-start-line="437" selection-start-column="10" selection-end-line="437" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/crates.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="269" column="100" selection-start-line="269" selection-start-column="100" selection-end-line="269" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#14178#14439#0" expanded="true" />
-            <element signature="e#14438#14439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

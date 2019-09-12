@@ -21,6 +21,7 @@ Crates:
       colors:
         - 'BLUE_STAINED_GLASS_PANE'
       shuffle-time: 5
+      duplicate-rewards: true
     bonus-rewards:
       1:
         chance: 50.0
