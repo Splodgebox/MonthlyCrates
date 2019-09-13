@@ -44,12 +44,7 @@ public final class MonthlyCrates extends JavaPlugin {
         commandManager.getCommandCompletions().registerCompletion("crates", c -> crates.getConfiguration().getConfigurationSection("Crates").getKeys(false));
         Metrics metrics = new Metrics(this);
 
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                loadCrates();
-            }
-        }.runTaskLater(this, 20L);
+        Bukkit.getScheduler().runTaskLaterAsynchronously(this, this::loadCrates, 20);
     }
 
     @Override
