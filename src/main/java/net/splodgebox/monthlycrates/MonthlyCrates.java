@@ -12,8 +12,8 @@ import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.Metrics;
 import net.splodgebox.monthlycrates.utils.gui.GuiListener;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;
 import java.util.Map;
@@ -34,7 +34,7 @@ public final class MonthlyCrates extends JavaPlugin {
         crates = new FileManager(this, "crates", getDataFolder().getAbsolutePath());
         lang = new FileManager(this, "lang", getDataFolder().getAbsolutePath());
         loadMessages();
-        saveConfig();
+        saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new GuiListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
 

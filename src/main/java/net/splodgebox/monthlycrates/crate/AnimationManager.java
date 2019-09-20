@@ -43,7 +43,7 @@ public class AnimationManager {
     @Getter
     private static HashMap<UUID, Gui> playerList = Maps.newHashMap();
 
-    public Gui inventory = new Gui("", 6);
+    public Gui inventory;
 
     private Map<Integer, Integer[]> animationSlots = Maps.newHashMap();
 
@@ -65,6 +65,9 @@ public class AnimationManager {
     };
 
     public void init() {
+        String displayName = getPlugin().crates.getConfiguration().getString("Crates." + crate + ".title");
+        if (displayName == null) displayName = crate;
+        inventory = new Gui(displayName, 6);
         colorList = getPlugin().crates.getConfiguration().getStringList("Crates." + crate + ".animation.colors");
         rewardManagers = Lists.newArrayList();
         rewardManagers.addAll(MonthlyCrates.getRewardMap().get(crate));

@@ -39,11 +39,11 @@ public class PlayerEvents implements Listener {
             NBTItem nbtItem = new NBTItem(itemStack);
             if (nbtItem.hasKey("MonthlyCrate")) {
                 String crate = nbtItem.getString("MonthlyCrate");
-                if (MonthlyCrates.getInstance().crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).size() < 9) {
-                    if (!MonthlyCrates.getInstance().crates.getConfiguration().getBoolean("Crates." + crate + ".animation.duplicate-rewards")) {
+                if (!MonthlyCrates.getInstance().crates.getConfiguration().getBoolean("Crates." + crate + ".animation.duplicate-rewards")) {
+                    if (MonthlyCrates.getInstance().crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).size() < 9) {
                         Message.NOT_ENOUGH_REWARDS.msg(player);
+                        return;
                     }
-                    return;
                 }
                 if (nbtItem.getItem().getAmount() > 1) return;
                 player.setItemInHand(new ItemStack(Material.AIR));

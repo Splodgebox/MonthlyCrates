@@ -17,13 +17,15 @@ public class CosmicCrateCommand extends BaseCommand {
     public void openGUI(CommandSender commandSender) {
         if (commandSender instanceof Player) {
             Player player = (Player) commandSender;
+            int size = (MonthlyCrates.getInstance().crates.getConfiguration().getConfigurationSection("Crates").getKeys(false).size() / 9) + 1;
             if (MonthlyCrates.getInstance().getConfig().getBoolean("Display.enabled")) {
-                Gui inventory = new Gui("All current monthly crates", 4);
+                Gui inventory = new Gui("All current monthly crates", size);
                 for (String string : MonthlyCrates.getInstance().crates.getConfiguration().getConfigurationSection("Crates").getKeys(false)) {
                     inventory.addItem(new CrateManager(string, MonthlyCrates.getInstance()).getItemStack(
-                            MonthlyCrates.getInstance().crates.getConfiguration().getString("Preview.placeholder")), (clicker, event) -> {
+                            player.getName()), (clicker, event) -> {
                     });
                 }
+                inventory.open(player);
             }
         }
     }
