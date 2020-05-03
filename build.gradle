@@ -47,6 +47,9 @@ repositories {
     maven { 
         url 'https://jitpack.io'
     }
+    maven {
+        url 'https://repo.codemc.org/repository/maven-public/'
+    }
 }
 
 compileJava {
@@ -62,6 +65,7 @@ dependencies {
     apt "org.projectlombok:lombok:1.18.0"
     compile "co.aikar:acf-core:0.5.0-SNAPSHOT"
     compile "co.aikar:acf-paper:0.5.0-SNAPSHOT"
+    compileOnly 'de.tr7zw:item-nbt-api:2.3.1'
 }
 
 shadowJar {
