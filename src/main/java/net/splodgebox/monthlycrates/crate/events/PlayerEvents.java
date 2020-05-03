@@ -1,8 +1,8 @@
 package net.splodgebox.monthlycrates.crate.events;
 
+import de.tr7zw.changeme.nbtapi.NBTItem;
 import net.splodgebox.monthlycrates.MonthlyCrates;
 import net.splodgebox.monthlycrates.crate.AnimationManager;
-import net.splodgebox.monthlycrates.nbt.NBTItem;
 import net.splodgebox.monthlycrates.utils.Message;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
