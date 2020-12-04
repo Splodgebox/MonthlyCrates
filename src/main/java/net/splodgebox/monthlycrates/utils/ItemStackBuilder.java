@@ -1,8 +1,7 @@
 package net.splodgebox.monthlycrates.utils;
 
 import com.google.common.collect.Lists;
-import net.splodgebox.monthlycrates.nbt.NBTItem;
-import net.splodgebox.monthlycrates.utils.Chat;
+import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;

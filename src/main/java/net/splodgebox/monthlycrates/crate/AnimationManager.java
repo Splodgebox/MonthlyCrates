@@ -23,32 +23,17 @@ import java.util.stream.IntStream;
 @RequiredArgsConstructor
 public class AnimationManager {
 
-    @Getter
-    private final String crate;
+    @Getter private final String crate;
+    @Getter private final MonthlyCrates plugin;
+    @Getter private final Player player;
 
-    @Getter
-    private final MonthlyCrates plugin;
-
-    @Getter
-    private final Player player;
-
-    @Getter
-    @Setter
-    private int completedRewards;
-
-    @Getter
-    @Setter
-    private boolean completed;
-
-    @Getter
-    private static HashMap<UUID, Gui> playerList = Maps.newHashMap();
+    @Getter @Setter private int completedRewards;
+    @Getter @Setter private boolean completed;
+    @Getter private static HashMap<UUID, Gui> playerList = Maps.newHashMap();
 
     public Gui inventory;
-
     private Map<Integer, Integer[]> animationSlots = Maps.newHashMap();
-
     private RandomCollection<RewardManager> rewards = new RandomCollection<>();
-
     private List<RewardManager> rewardManagers = Lists.newArrayList();
 
 

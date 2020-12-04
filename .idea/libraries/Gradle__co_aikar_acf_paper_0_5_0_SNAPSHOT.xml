@@ -2,6 +2,9 @@
   <library name="Gradle: co.aikar:acf-paper:0.5.0-SNAPSHOT">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/8a1a0841ae1e83bc22919a80d1a8a0a1fc00a4af/acf-paper-0.5.0-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/b5320bf45144ee4da5dd2ea2097f2ac22b973123/acf-paper-0.5.0-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/d2b51573853cee184bd970d826630d14b644fdab/acf-paper-0.5.0-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/f9ceedfcec233886f7d658adfa0a0c708825aa60/acf-paper-0.5.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -15,6 +18,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/cf05942e5e44483f468dc8201b10433c68c7930b/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/f29f56a37bf4f9da348227977ff4174dc6135b06/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/c96c7205d4999bb0cc7ee2613332b618bbcd07d2/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/3cd1d17b406bf9b78ba6c324ca0e84d5f7d2c5a5/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/4596f4c740cc700db6543518cac5d44fa7a47f79/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/co.aikar/acf-paper/0.5.0-SNAPSHOT/eb8c1b7bcb9b3e9dcd5b1191c60f7bcc71a3a818/acf-paper-0.5.0-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

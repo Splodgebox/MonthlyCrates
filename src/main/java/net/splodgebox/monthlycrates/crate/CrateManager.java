@@ -46,16 +46,21 @@ public class CrateManager {
     public void loadRewards(){
         MonthlyCrates.getRewardMap().remove(crate);
         List<RewardManager> list = Lists.newArrayList();
-        plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> list.add(new RewardManager(
-                plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
-                Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
-                plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
-                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
-                plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount"),
-                plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
-                plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".enchants"),
-                plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")
-        )));
+
+        plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> {
+            int amount =   plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount");
+            if (amount == 0) amount = 1;
+            list.add(
+                    new RewardManager(
+                            plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
+                            Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
+                            plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
+                            plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
+                            amount,
+                            plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
+                            plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".enchants"),
+                            plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")));
+        });
         MonthlyCrates.getRewardMap().put(crate, list);
     }
 

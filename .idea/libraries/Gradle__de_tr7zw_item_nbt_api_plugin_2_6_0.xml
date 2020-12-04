@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: de.tr7zw:item-nbt-api-plugin:2.6.0">
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/jbr/bin/Could not find de.tr7zw:item-nbt-api-plugin:2.6.0." />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.tr7zw/item-nbt-api-plugin/2.6.0/9fb9041e96a3cf8ae9172d6dc0c9543693ced837/item-nbt-api-plugin-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.tr7zw/item-nbt-api-plugin/2.6.0/585a4b0100c62d0df2fce52489df72dbdcf279b0/item-nbt-api-plugin-2.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
