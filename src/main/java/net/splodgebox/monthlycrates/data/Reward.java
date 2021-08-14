@@ -1,4 +1,4 @@
-package net.splodgebox.monthlycrates.crate;
+package net.splodgebox.monthlycrates.data;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.List;
 
 @RequiredArgsConstructor
-public class RewardManager {
+public class Reward {
 
     @Getter
     private final double chance;

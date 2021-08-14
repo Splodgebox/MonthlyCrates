@@ -20,13 +20,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: co.aikar:acf-core:0.5.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: co.aikar:acf-paper:0.5.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: de.tr7zw:item-nbt-api-plugin:2.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: de.tr7zw:item-nbt-api-plugin:2.8.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.md-5:bungeecord-chat:1.16-R0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.md-5:bungeecord-chat:1.16-R0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.yaml:snakeyaml:1.26" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.yaml:snakeyaml:1.28" level="project" />
   </component>
 </module>

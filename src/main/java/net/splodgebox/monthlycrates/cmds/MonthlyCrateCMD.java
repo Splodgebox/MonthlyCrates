@@ -4,7 +4,7 @@ import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import co.aikar.commands.bukkit.contexts.OnlinePlayer;
 import net.splodgebox.monthlycrates.MonthlyCrates;
-import net.splodgebox.monthlycrates.crate.CrateManager;
+import net.splodgebox.monthlycrates.managers.CrateManager;
 import net.splodgebox.monthlycrates.utils.Chat;
 import net.splodgebox.monthlycrates.utils.ConfigurationUtils;
 import net.splodgebox.monthlycrates.utils.Message;

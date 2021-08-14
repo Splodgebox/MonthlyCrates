@@ -5,18 +5,21 @@ import com.google.common.collect.Maps;
 import lombok.Getter;
 import net.splodgebox.monthlycrates.cmds.CosmicCrateCommand;
 import net.splodgebox.monthlycrates.cmds.MonthlyCrateCMD;
-import net.splodgebox.monthlycrates.crate.CrateManager;
-import net.splodgebox.monthlycrates.crate.RewardManager;
-import net.splodgebox.monthlycrates.crate.events.PlayerEvents;
+import net.splodgebox.monthlycrates.data.Reward;
+import net.splodgebox.monthlycrates.listeners.PlayerListeners;
+import net.splodgebox.monthlycrates.managers.CrateManager;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.Metrics;
+import net.splodgebox.monthlycrates.utils.gui.Gui;
 import net.splodgebox.monthlycrates.utils.gui.GuiListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public final class MonthlyCrates extends JavaPlugin {
 
@@ -25,8 +28,8 @@ public final class MonthlyCrates extends JavaPlugin {
     public FileManager crates;
     public FileManager lang;
 
-    @Getter
-    private static Map<String, List<RewardManager>> rewardMap = Maps.newHashMap();
+    @Getter private static Map<String, List<Reward>> rewardMap = Maps.newHashMap();
+    @Getter private HashMap<UUID, Gui> playerList = Maps.newHashMap();
 
     @Override
     public void onEnable() {
@@ -36,7 +39,7 @@ public final class MonthlyCrates extends JavaPlugin {
         loadMessages();
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new GuiListener(), this);
-        getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
 
         PaperCommandManager commandManager = new PaperCommandManager(this);
         commandManager.registerCommand(new MonthlyCrateCMD());

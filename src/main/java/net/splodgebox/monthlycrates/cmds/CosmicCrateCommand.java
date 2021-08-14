@@ -4,12 +4,10 @@ import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.Default;
 import net.splodgebox.monthlycrates.MonthlyCrates;
-import net.splodgebox.monthlycrates.crate.CrateManager;
+import net.splodgebox.monthlycrates.managers.CrateManager;
 import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 @CommandAlias("cc|cosmiccrate")
 public class CosmicCrateCommand extends BaseCommand {

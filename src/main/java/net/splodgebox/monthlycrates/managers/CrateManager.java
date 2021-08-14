@@ -1,16 +1,15 @@
-package net.splodgebox.monthlycrates.crate;
+package net.splodgebox.monthlycrates.managers;
 
 import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.splodgebox.monthlycrates.MonthlyCrates;
+import net.splodgebox.monthlycrates.data.Reward;
 import net.splodgebox.monthlycrates.utils.Chat;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import java.time.Month;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -45,24 +44,26 @@ public class CrateManager {
 
     public void loadRewards(){
         MonthlyCrates.getRewardMap().remove(crate);
-        List<RewardManager> list = Lists.newArrayList();
+        List<Reward> list = Lists.newArrayList();
 
         plugin.crates.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards").getKeys(false).forEach(string -> {
             int amount =   plugin.crates.getConfiguration().getInt("Crates." + crate + ".rewards." + string + ".amount");
             if (amount == 0) amount = 1;
-            list.add(
-                    new RewardManager(
-                            plugin.crates.getConfiguration().getDouble("Crates." + crate + ".rewards." + string + ".chance"),
-                            Material.valueOf(plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".material")),
-                            plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".name"),
-                            plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".lore"),
-                            amount,
-                            plugin.crates.getConfiguration().getString("Crates." + crate + ".rewards." + string + ".command"),
-                            plugin.crates.getConfiguration().getStringList("Crates." + crate + ".rewards." + string + ".enchants"),
-                            plugin.crates.getConfiguration().getBoolean("Crates." + crate + ".rewards." + string + ".give_item")));
+
+            String path = "Crates." + crate + ".rewards." + string + ".";
+            list.add(new Reward(
+                    plugin.crates.getConfiguration().getDouble(path + "chance"),
+                    Material.valueOf(plugin.crates.getConfiguration().getString(path +  "material")),
+                    plugin.crates.getConfiguration().getString(path + "name"),
+                    plugin.crates.getConfiguration().getStringList(path + "lore"),
+                    amount,
+                    plugin.crates.getConfiguration().getString(path + "command"),
+                    plugin.crates.getConfiguration().getStringList(path + "enchants"),
+                    plugin.crates.getConfiguration().getBoolean(path + "give_item")));
         });
         MonthlyCrates.getRewardMap().put(crate, list);
     }
 
 
 }
+
