@@ -5,63 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="734a955d-939e-49e9-91fd-c9c5afd37661" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_tr7zw_item_nbt_api_plugin_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_md_5_bungeecord_chat_1_16_R0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spigotmc_spigot_api_1_17_1_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/data/Reward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/listeners/PlayerListeners.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/managers/AnimationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/managers/CrateManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/CompatibleHand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/ItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_core_0_5_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_core_0_5_0_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_paper_0_5_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__co_aikar_acf_paper_0_5_0_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_tr7zw_item_nbt_api_plugin_2_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_md_5_bungeecord_chat_1_16_R0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spigotmc_spigot_api_1_16_4_R0_1_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/MonthlyCrates.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/MonthlyCrates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/CosmicCrateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/CosmicCrateCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/AnimationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/CrateManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/RewardManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/events/PlayerEvents$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/crate/events/PlayerEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/MonthlyCrates-3.1.2-all.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/MonthlyCrates-3.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/java-compiler-args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/java-compiler-args.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/CosmicCrateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/CosmicCrateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/AnimationManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/CrateManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/RewardManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/crate/events/PlayerEvents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/MonthlyCrates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/CosmicCrateCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/cmds/MonthlyCrateCMD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/data/Reward.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/listeners/PlayerListeners.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/managers/AnimationManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/managers/AnimationManager$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/managers/AnimationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/managers/CrateManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Chat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/CompatibleHand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ConfigurationUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ItemStackBuilder$Nbt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ItemStackBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/ItemUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$AdvancedBarChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$AdvancedPie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$CustomChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$DrilldownPie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$MultiLineChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$SimpleBarChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$SimplePie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics$SingleLineChart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/Metrics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/RandomCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/XMaterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/gui/ClickAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/gui/CloseAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/gui/Gui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/gui/GuiItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/splodgebox/monthlycrates/utils/gui/GuiListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MonthlyCrates-3.1.3-all.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/crates.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/lang.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/java-compiler-args.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/shadowJar/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +143,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Gradle.MonthlyCrates [shadowJar]">
+  <component name="RunManager" selected="Gradle.MonthlyCrates [clean]">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -278,8 +263,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MonthlyCrates [shadowJar]" />
         <item itemvalue="Gradle.MonthlyCrates [clean]" />
+        <item itemvalue="Gradle.MonthlyCrates [shadowJar]" />
         <item itemvalue="Gradle.MonthlyCrates [jar]" />
       </list>
     </recent_temporary>
@@ -321,7 +306,7 @@
       <workItem from="1588528981274" duration="107000" />
       <workItem from="1604948698991" duration="834000" />
       <workItem from="1606750601999" duration="34000" />
-      <workItem from="1628959131828" duration="2228000" />
+      <workItem from="1628959131828" duration="2511000" />
     </task>
     <servers />
   </component>
