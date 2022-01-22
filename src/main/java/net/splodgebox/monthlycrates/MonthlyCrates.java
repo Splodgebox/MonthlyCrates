@@ -1,72 +1,69 @@
 package net.splodgebox.monthlycrates;
 
 import co.aikar.commands.PaperCommandManager;
-import com.google.common.collect.Maps;
 import lombok.Getter;
-import net.splodgebox.monthlycrates.cmds.CosmicCrateCommand;
-import net.splodgebox.monthlycrates.cmds.MonthlyCrateCMD;
-import net.splodgebox.monthlycrates.crate.CrateManager;
-import net.splodgebox.monthlycrates.crate.RewardManager;
-import net.splodgebox.monthlycrates.crate.events.PlayerEvents;
+import net.splodgebox.monthlycrates.commands.HelpCommand;
+import net.splodgebox.monthlycrates.commands.crates.GiveCrateCommand;
+import net.splodgebox.monthlycrates.controllers.CrateController;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.Metrics;
 import net.splodgebox.monthlycrates.utils.gui.GuiListener;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.List;
-import java.util.Map;
 
 public final class MonthlyCrates extends JavaPlugin {
 
     @Getter
     private static MonthlyCrates instance;
-    public FileManager crates;
-    public FileManager lang;
 
     @Getter
-    private static Map<String, List<RewardManager>> rewardMap = Maps.newHashMap();
+    private FileManager langFile;
+
+    @Getter
+    private CrateController crateController;
 
     @Override
     public void onEnable() {
         instance = this;
-        crates = new FileManager(this, "crates", getDataFolder().getAbsolutePath());
-        lang = new FileManager(this, "lang", getDataFolder().getAbsolutePath());
-        loadMessages();
         saveDefaultConfig();
-        getServer().getPluginManager().registerEvents(new GuiListener(), this);
-        getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
 
-        PaperCommandManager commandManager = new PaperCommandManager(this);
-        commandManager.registerCommand(new MonthlyCrateCMD());
-        commandManager.registerCommand(new CosmicCrateCommand());
-        commandManager.getCommandCompletions().registerCompletion("crates", c -> crates.getConfiguration().getConfigurationSection("Crates").getKeys(false));
-        Metrics metrics = new Metrics(this);
+        crateController = new CrateController(this);
+        loadMessages();
 
-        Bukkit.getScheduler().runTaskLaterAsynchronously(this, this::loadCrates, 20);
+        registerListeners();
+        registerCommands();
+
+        new Metrics(this);
     }
 
     @Override
     public void onDisable() {
         instance = null;
+    }
 
+    public void registerCommands() {
+        PaperCommandManager commandManager = new PaperCommandManager(this);
+
+        commandManager.registerCommand(new HelpCommand());
+        commandManager.registerCommand(new GiveCrateCommand(this));
+
+        commandManager.getCommandCompletions().registerStaticCompletion("crates",
+                crateController.getCrates().keySet());
+    }
+
+    public void registerListeners() {
+        getServer().getPluginManager().registerEvents(new GuiListener(), this);
     }
 
     private void loadMessages() {
+        langFile = new FileManager(this, "lang", getDataFolder().getAbsolutePath());
         for (Message message : Message.values()) {
-            if (!this.lang.getConfiguration().contains(message.getPath())) {
-                this.lang.getConfiguration().set(message.getPath(), message.getDefault());
+            if (!this.langFile.getConfiguration().contains(message.getPath())) {
+                this.langFile.getConfiguration().set(message.getPath(), message.getDefault());
             }
         }
 
-        lang.save();
-        Message.setFile(this.lang.getConfiguration());
-    }
-
-    public void loadCrates() {
-        crates.getConfiguration().getConfigurationSection("Crates").getKeys(false).forEach(s -> {
-            new CrateManager(s, this).loadRewards();
-        });
+        langFile.save();
+        Message.setFile(this.langFile.getConfiguration());
     }
 }

@@ -1,5 +1,6 @@
 package net.splodgebox.monthlycrates.utils;
 
+import com.google.common.collect.Maps;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -7,8 +8,10 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import java.text.SimpleDateFormat;
+import java.util.Map;
 
 public enum Message {
     COMMAND_MESSAGE(
@@ -31,10 +34,10 @@ public enum Message {
     NOT_ENOUGH_REWARDS("&C&L(!) &CThis crate does not contain enough rewards! [Min: 9] OR You can enable duplicate rewards"),
     INVENTORY_FULL("&c&l(!) &cYour inventory was full so your item was dropped on the floor!");
 
+    public static SimpleDateFormat sdf;
+    private static FileConfiguration LANG;
     private String path;
     private String msg;
-    private static FileConfiguration LANG;
-    public static SimpleDateFormat sdf;
 
     Message(String path, String start) {
         this.path = path;
@@ -42,7 +45,7 @@ public enum Message {
     }
 
     Message(String string) {
-        this.path = this.name().replace("_", ".");
+        this.path = this.name().replace("__", ".");
         this.msg = string;
     }
 
@@ -63,18 +66,37 @@ public enum Message {
         return this.path;
     }
 
-    public void msg(CommandSender p, Object... args) {
+    public void msg(CommandSender p, String... placeholders) {
+        Map<String, String> holders = Maps.newHashMap();
+
+        int i = 0;
+        String value = "";
+        for (String placeholder : placeholders) {
+            if (i == 1) {
+                holders.put(value, placeholder);
+                i = 0;
+                continue;
+            }
+
+            value = placeholder;
+            i = 1;
+        }
+
+        msg(p, holders);
+    }
+
+    public void msg(CommandSender p, Map<String, String> placeholders) {
         String s = toString();
 
         if (s.contains("\n")) {
             String[] split = s.split("\n");
 
             for (String inner : split) {
-                sendMessage(p, inner, args);
+                sendMessage(p, inner, placeholders);
             }
 
         } else {
-            sendMessage(p, s, args);
+            sendMessage(p, s, placeholders);
         }
     }
 
@@ -86,49 +108,36 @@ public enum Message {
 
             for (String inner : split) {
                 for (Player player : Bukkit.getOnlinePlayers()) {
-                    sendMessage(player, inner, args);
+                    sendMessage(player, inner, null);
                 }
             }
         } else {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                sendMessage(player, s, args);
+                sendMessage(player, s, null);
             }
         }
     }
 
-    private String getFinalized(String string, Object... order) {
-        int current = 0;
-
-        for (Object object : order) {
-            String placeholder = "{" + current + "}";
-
-            if (string.contains(placeholder)) {
-                if (object instanceof CommandSender) {
-                    string = string.replace(placeholder, ((CommandSender) object).getName());
-                } else if (object instanceof OfflinePlayer) {
-                    string = string.replace(placeholder, ((OfflinePlayer) object).getName());
-                } else if (object instanceof Location) {
-                    Location location = (Location) object;
-                    String repl = location.getWorld().getName() + ", " + location.getBlockX() + ", " + location.getBlockY() + ", " + location.getBlockZ();
-
-                    string = string.replace(placeholder, repl);
-                } else if (object instanceof Double) {
-                    string = string.replace(placeholder, "" + object);
-                } else if (object instanceof Integer) {
-                    string = string.replace(placeholder, "" + object);
+    private void sendMessage(CommandSender target, String string, Map<String, String> placeholders) {
+        if (placeholders != null) {
+            for (String s : placeholders.keySet()) {
+                if (string.contains(s)) {
+                    string = string.replace(s, placeholders.get(s));
                 }
             }
-
-            current++;
         }
 
-        return string;
+        target.sendMessage(Chat.color(string));
     }
 
-    private void sendMessage(CommandSender target, String string, Object... order) {
-        string = getFinalized(string, order);
+    private String getItemStackName(ItemStack itemStack) {
+        String name = itemStack.getType().toString().replace("_", " ");
 
-        target.sendMessage(string);
+        if (itemStack.hasItemMeta() && itemStack.getItemMeta().hasDisplayName()) {
+            return itemStack.getItemMeta().getDisplayName();
+        }
+
+        return name;
     }
 
 }

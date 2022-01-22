@@ -28,8 +28,9 @@ Crates:
         material: "DIRT"
         name: "&c&lBonus Reward"
         lore:
-          - 'This is a really cool dirt'
-        command: "give %player% dirt"
+          - 'This is a really cool diamond'
+        command:
+          - 'give %player% dirt'
         give_item: false
     rewards:
       1:
@@ -46,5 +47,6 @@ Crates:
         name: "&c&lDIAMOND"
         lore:
           - 'This is a really cool dirt'
-        command: "give %player% diamond"
+        command:
+          - 'give %player% diamond'
         give_item: false

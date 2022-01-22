@@ -11,6 +11,7 @@ import java.util.TreeMap;
 import java.util.Random;
 
 public class RandomCollection<E> {
+
     private final NavigableMap<Double, E> map = new TreeMap<Double, E>();
     private final Random random;
     private double total = 0;

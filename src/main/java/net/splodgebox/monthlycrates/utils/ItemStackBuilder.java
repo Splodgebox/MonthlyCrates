@@ -8,7 +8,9 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ItemStackBuilder {
 
@@ -81,6 +83,11 @@ public class ItemStackBuilder {
         return this;
     }
 
+    public ItemStackBuilder addEnchants(Map<Enchantment, Integer> enchants) {
+        enchants.forEach((enchantment, integer) -> itemStack.addUnsafeEnchantment(enchantment, integer));
+        return this;
+    }
+
     public ItemStackBuilder withGlow() {
         ItemMeta meta = itemStack.getItemMeta();
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -96,6 +103,10 @@ public class ItemStackBuilder {
 
     public ItemStack build() {
         return itemStack;
+    }
+
+    public ItemStack build(Map<String, String> placeholders) {
+        return replaceData(itemStack, placeholders);
     }
 
     public class Nbt {
@@ -132,10 +143,40 @@ public class ItemStackBuilder {
             return nbtItem.getItem();
         }
 
+        public ItemStack build(Map<String, String> placeholders) {
+            return replaceData(nbtItem.getItem(), placeholders);
+        }
+
         public ItemStackBuilder builder() {
             return builder;
         }
 
+    }
+
+    private ItemStack replaceData(ItemStack itemStack, Map<String, String> replaceMap) {
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        boolean hasName = itemMeta.hasDisplayName();
+        boolean hasLore = itemMeta.hasLore();
+        List<String> newLore = new ArrayList<>();
+        String name = itemStack.getType().name();
+        if (hasName) name = itemMeta.getDisplayName();
+        if (replaceMap != null && !replaceMap.isEmpty()) {
+            if (hasName) {
+                for (String s : replaceMap.keySet())
+                    if (name.contains(s)) name = name.replace(s, replaceMap.get(s));
+                itemMeta.setDisplayName(Chat.color(name));
+            }
+            if (hasLore) {
+                for (String s : itemMeta.getLore()) {
+                    for (String z : replaceMap.keySet()) if (s.contains(z)) s = s.replace(z, replaceMap.get(z));
+                    newLore.add(Chat.color(s));
+                }
+                itemMeta.setLore(newLore);
+            }
+        }
+
+        itemStack.setItemMeta(itemMeta);
+        return itemStack;
     }
 
 }
