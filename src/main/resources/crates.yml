@@ -22,6 +22,23 @@ Crates:
         - 'BLUE_STAINED_GLASS_PANE'
       shuffle-time: 5
       duplicate-rewards: true
+      panes:
+        filler:
+          material: "GRAY_STAINED_GLASS_PANE"
+          name: " "
+          lore: []
+        hidden:
+          material: "ENDER_CHEST"
+          name: "&7&l???"
+          lore:
+            - '&7Click to redeem an item'
+            - '&7from this monthly crate'
+        locked:
+          material: "RED_STAINED_GLASS_PANE"
+          name: "&c&lLOCKED"
+          lore:
+            - '&7You must unlock all other rewards'
+            - '&7to obtain the bonus item'
     bonus-rewards:
       1:
         chance: 50.0

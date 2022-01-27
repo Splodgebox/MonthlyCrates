@@ -16,6 +16,7 @@ import java.util.UUID;
 public class Crate {
 
     private final String id;
+    private final String title;
     private final String name;
     private final List<String> description;
     private final XMaterial material;
@@ -23,6 +24,9 @@ public class Crate {
     private final List<XMaterial> colors;
     private final int shuffleTime;
     private final boolean duplicateReward;
+    private final ItemStack filler;
+    private final ItemStack hidden;
+    private final ItemStack locked;
 
     private final RandomCollection<Reward> bonusRewards;
     private final RandomCollection<Reward> rewards;
