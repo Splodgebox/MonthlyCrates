@@ -5,6 +5,7 @@ import lombok.Getter;
 import net.splodgebox.monthlycrates.commands.HelpCommand;
 import net.splodgebox.monthlycrates.commands.crates.GiveCrateCommand;
 import net.splodgebox.monthlycrates.controllers.CrateController;
+import net.splodgebox.monthlycrates.listeners.CrateListeners;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.Metrics;
@@ -52,6 +53,7 @@ public final class MonthlyCrates extends JavaPlugin {
     }
 
     public void registerListeners() {
+        getServer().getPluginManager().registerEvents(new CrateListeners(this), this);
         getServer().getPluginManager().registerEvents(new GuiListener(), this);
     }
 

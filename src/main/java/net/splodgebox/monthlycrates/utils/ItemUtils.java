@@ -19,6 +19,11 @@ public class ItemUtils {
         return nbtItem.hasKey(tag);
     }
 
+    public static String getNBTString(ItemStack itemStack, String tag) {
+        NBTItem nbtItem = new NBTItem(itemStack);
+        return nbtItem.getString(tag);
+    }
+
 
     public static void takeActiveItem(Player player, CompatibleHand hand, int amount) {
         if (hand == CompatibleHand.MAIN_HAND) {

@@ -1,6 +1,11 @@
 package net.splodgebox.monthlycrates.listeners;
 
+import lombok.RequiredArgsConstructor;
+import net.splodgebox.monthlycrates.MonthlyCrates;
+import net.splodgebox.monthlycrates.controllers.CrateAnimationController;
+import net.splodgebox.monthlycrates.data.Crate;
 import net.splodgebox.monthlycrates.utils.ItemUtils;
+import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.enums.CompatibleHand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +15,10 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
+@RequiredArgsConstructor
 public class CrateListeners implements Listener {
+
+    private final MonthlyCrates plugin;
 
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
@@ -23,9 +31,23 @@ public class CrateListeners implements Listener {
 
         if (!ItemUtils.hasNBT(itemStack, "MonthlyCrates")) return;
 
-        ItemUtils.takeActiveItem(player, CompatibleHand.getHand(event), 1);
+        String crateName = ItemUtils.getNBTString(itemStack, "MonthlyCrates");
+        if (!plugin.getCrateController().getCrates().containsKey(crateName)) {
+            Message.INVALID_CRATE.msg(player);
+            return;
+        }
 
-        // TODO: Run animation
+        ItemUtils.takeActiveItem(player, CompatibleHand.getHand(event), 1);
+        Crate crate = plugin.getCrateController().getCrates().get(crateName);
+
+        if (!crate.isDuplicateReward() &&
+                crate.getRewards().size() < 9) {
+            Message.NOT_ENOUGH_REWARDS.msg(player);
+            return;
+        }
+
+        CrateAnimationController crateAnimationController = new CrateAnimationController(plugin, player, crate);
+        crateAnimationController.start();
     }
 
     @EventHandler

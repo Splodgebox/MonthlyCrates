@@ -8,8 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="MonthlyCrates.main" />
     <orderEntry type="library" name="Gradle: co.aikar:acf-paper:0.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: co.aikar:acf-core:0.5.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: de.tr7zw:item-nbt-api-plugin:2.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: de.tr7zw:item-nbt-api-plugin:2.9.0-SNAPSHOT" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="MonthlyCrates.main" />
 </module>

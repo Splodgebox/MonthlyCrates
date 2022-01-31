@@ -20,6 +20,13 @@ Crates:
     animation:
       colors:
         - 'BLUE_STAINED_GLASS_PANE'
+        - 'PINK_STAINED_GLASS_PANE'
+        - 'LIGHT_BLUE_STAINED_GLASS_PANE'
+        - 'GRAY_STAINED_GLASS_PANE'
+        - 'YELLOW_STAINED_GLASS_PANE'
+        - 'PURPLE_STAINED_GLASS_PANE'
+        - 'ORANGE_STAINED_GLASS_PANE'
+        - 'CYAN_STAINED_GLASS_PANE'
       shuffle-time: 5
       duplicate-rewards: true
       panes:
@@ -39,6 +46,12 @@ Crates:
           lore:
             - '&7You must unlock all other rewards'
             - '&7to obtain the bonus item'
+        final:
+          material: "ENDER_CHEST"
+          name: "&7&l???"
+          lore:
+            - '&7Click to redeem your'
+            - '&7bonus reward'
     bonus-rewards:
       1:
         chance: 50.0
@@ -55,15 +68,16 @@ Crates:
         material: "DIRT"
         name: "&c&lDirt"
         lore:
-          - 'This is a really cool dirt'
-        command: "give %player% dirt"
+          - '&7This is a really cool dirt'
+        command:
+          - 'give %player% dirt'
         give_item: false
       2:
         chance: 60.0
         material: "DIAMOND"
         name: "&c&lDIAMOND"
         lore:
-          - 'This is a really cool dirt'
+          - '&7This is a really cool dirt'
         command:
           - 'give %player% diamond'
         give_item: false

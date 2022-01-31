@@ -1,6 +1,8 @@
 package net.splodgebox.monthlycrates.controllers;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import javafx.util.Pair;
 import lombok.Getter;
 import net.splodgebox.monthlycrates.MonthlyCrates;
 import net.splodgebox.monthlycrates.data.Crate;
@@ -52,7 +54,7 @@ public class CrateController {
                     crate,
                     config.getString(path + "title"),
                     config.getString(path + "name"),
-                    config.getStringList(path + "description"),
+                    config.getStringList(path + "lore"),
                     XMaterial.matchXMaterial(Objects.requireNonNull(config.getString(path + "material")))
                             .orElse(XMaterial.CHEST),
                     colors,
@@ -61,15 +63,16 @@ public class CrateController {
                     getPane(crate, "filler"),
                     getPane(crate, "hidden"),
                     getPane(crate, "locked"),
+                    getPane(crate, "final"),
                     fetchRewards(crate, "bonus-rewards"),
                     fetchRewards(crate, "rewards")
             ));
         }
     }
 
-    public RandomCollection<Reward> fetchRewards(String crate, String identifier) {
+    public List<Pair<Double, Reward>> fetchRewards(String crate, String identifier) {
         YamlConfiguration config = cratesFile.getConfiguration();
-        RandomCollection<Reward> rewards = new RandomCollection<>();
+        List<Pair<Double, Reward>> rewards = Lists.newArrayList();
 
         for (String key : config.getConfigurationSection("Crates." + crate + "." + identifier).getKeys(false)) {
             String path = "Crates." + crate + "." + identifier + "." + key + ".";
@@ -88,7 +91,7 @@ public class CrateController {
                     config.getStringList(path + "command"),
                     config.getBoolean(path + "give-item")
             );
-            rewards.add(reward.getChance(), reward);
+            rewards.add(new Pair<>(reward.getChance(), reward));
         }
 
         return rewards;
