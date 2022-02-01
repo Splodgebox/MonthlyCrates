@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="734a955d-939e-49e9-91fd-c9c5afd37661" name="Default Changelist" comment="">
+    <list default="true" id="734a955d-939e-49e9-91fd-c9c5afd37661" name="Default Changelist" comment="Start of the recode, recode from scratch">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/MonthlyCrates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/ReloadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/ReloadCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/AddRewardCrateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/AddRewardCrateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/GenerateCrateCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/GiveCrateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/GiveCrateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/ListCrateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/commands/crates/ListCrateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/controllers/CrateAnimationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/controllers/CrateAnimationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/controllers/CrateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/controllers/CrateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/data/Reward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/data/Reward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/listeners/CrateListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/listeners/CrateListeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/splodgebox/monthlycrates/utils/RandomCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +44,11 @@
                 <item name="MonthlyCrates" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MonthlyCrates" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -279,7 +273,7 @@
       <workItem from="1642875575432" duration="4535000" />
       <workItem from="1643048544540" duration="108000" />
       <workItem from="1643652819323" duration="4657000" />
-      <workItem from="1643710781716" duration="2174000" />
+      <workItem from="1643710781716" duration="2300000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the recode, recode from scratch">
       <created>1642814019928</created>
