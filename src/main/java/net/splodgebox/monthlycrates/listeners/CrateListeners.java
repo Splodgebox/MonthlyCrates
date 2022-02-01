@@ -37,14 +37,14 @@ public class CrateListeners implements Listener {
             return;
         }
 
-        ItemUtils.takeActiveItem(player, CompatibleHand.getHand(event), 1);
         Crate crate = plugin.getCrateController().getCrates().get(crateName);
-
         if (!crate.isDuplicateReward() &&
                 crate.getRewards().size() < 9) {
             Message.NOT_ENOUGH_REWARDS.msg(player);
             return;
         }
+
+        ItemUtils.takeActiveItem(player, CompatibleHand.getHand(event), 1);
 
         CrateAnimationController crateAnimationController = new CrateAnimationController(plugin, player, crate);
         crateAnimationController.start();

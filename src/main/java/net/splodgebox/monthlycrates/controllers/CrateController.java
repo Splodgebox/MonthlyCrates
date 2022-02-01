@@ -9,10 +9,11 @@ import net.splodgebox.monthlycrates.data.Crate;
 import net.splodgebox.monthlycrates.data.Reward;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
-import net.splodgebox.monthlycrates.utils.RandomCollection;
 import net.splodgebox.monthlycrates.utils.XMaterial;
 import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -85,6 +86,7 @@ public class CrateController {
                     config.getDouble(path + "chance"),
                     XMaterial.matchXMaterial(Objects.requireNonNull(config.getString(path + "material")))
                             .orElse(XMaterial.AIR),
+                    config.getInt(path + "amount", 1),
                     config.getString(path + "name"),
                     config.getStringList(path + "lore"),
                     enchants,
@@ -107,5 +109,49 @@ public class CrateController {
                 .setLore(config.getStringList(path + "lore"))
                 .build();
     }
+
+
+    public void addReward(ItemStack itemStack, String crate, boolean giveItem, double chance, String command) {
+        String path = "Crates." + crate + ".rewards." + getLength(cratesFile.getConfiguration().getConfigurationSection("Crates." + crate + ".rewards")) + ".";
+        String name = itemStack.getItemMeta().getDisplayName();
+        if (!itemStack.getItemMeta().hasDisplayName()) name = "";
+        if (name.contains(String.valueOf(ChatColor.COLOR_CHAR)))
+            name = name.replace(String.valueOf(ChatColor.COLOR_CHAR), "&");
+
+        List<String> lore = itemStack.getItemMeta().getLore();
+        if (lore == null) lore = Lists.newArrayList();
+
+        if (!lore.isEmpty()) {
+            lore.stream().filter(s -> s.contains(String.valueOf(ChatColor.COLOR_CHAR))).forEach(s ->
+                    s.replace(String.valueOf(ChatColor.COLOR_CHAR), "&"));
+        }
+
+        List<String> enchantmentList = Lists.newArrayList();
+        itemStack.getEnchantments().forEach((enchantment, integer) ->
+                enchantmentList.add(enchantment.getName() + ":" + integer));
+
+        String material = itemStack.getType().toString();
+        cratesFile.getConfiguration().set(path + "chance", chance);
+        cratesFile.getConfiguration().set(path + "material", material);
+        cratesFile.getConfiguration().set(path + "name", name);
+        cratesFile.getConfiguration().set(path + "lore", lore);
+        cratesFile.getConfiguration().set(path + "amount", itemStack.getAmount());
+        cratesFile.getConfiguration().set(path + "enchants", enchantmentList);
+        cratesFile.getConfiguration().set(path + "command", Lists.newArrayList(command));
+        cratesFile.getConfiguration().set(path + "give_item", giveItem);
+        cratesFile.save();
+    }
+
+    public int getLength(ConfigurationSection section) {
+        int length = section.getKeys(false).size();
+        return length + 1;
+    }
+
+    public void reload() {
+        cratesFile.reload();
+        crates.clear();
+        loadCrates();
+    }
+
 
 }

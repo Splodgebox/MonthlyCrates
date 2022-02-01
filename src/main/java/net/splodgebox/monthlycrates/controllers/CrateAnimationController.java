@@ -12,12 +12,9 @@ import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
 import net.splodgebox.monthlycrates.utils.RandomCollection;
 import net.splodgebox.monthlycrates.utils.XMaterial;
 import net.splodgebox.monthlycrates.utils.XSound;
-import net.splodgebox.monthlycrates.utils.gui.CloseAction;
 import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Arrays;
@@ -180,10 +177,6 @@ public class CrateAnimationController {
 
                 XSound.ENTITY_PLAYER_LEVELUP.play(player, 5, 8);
                 plugin.getCrateController().getActiveCrates().remove(player.getUniqueId());
-                Bukkit.getScheduler().runTaskLater(plugin, () -> {
-                    player.closeInventory();
-                    XSound.BLOCK_CHEST_CLOSE.play(player, 5, 1);
-                }, 100L);
             }
         }), 110L);
     }

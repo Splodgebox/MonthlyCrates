@@ -16,6 +16,7 @@ public class Reward {
 
     private final double chance;
     private final XMaterial material;
+    private final int amount;
     private final String name;
     private final List<String> lore;
     private final HashMap<Enchantment, Integer> enchants;
