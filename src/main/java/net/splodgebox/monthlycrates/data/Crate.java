@@ -1,11 +1,10 @@
 package net.splodgebox.monthlycrates.data;
 
 import com.google.common.collect.ImmutableMap;
-import javafx.util.Pair;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
-import net.splodgebox.monthlycrates.utils.RandomCollection;
+import net.splodgebox.monthlycrates.utils.Pair;
 import net.splodgebox.monthlycrates.utils.XMaterial;
 import org.bukkit.inventory.ItemStack;
 

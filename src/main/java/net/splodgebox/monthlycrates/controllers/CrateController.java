@@ -2,13 +2,13 @@ package net.splodgebox.monthlycrates.controllers;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import javafx.util.Pair;
 import lombok.Getter;
 import net.splodgebox.monthlycrates.MonthlyCrates;
 import net.splodgebox.monthlycrates.data.Crate;
 import net.splodgebox.monthlycrates.data.Reward;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
+import net.splodgebox.monthlycrates.utils.Pair;
 import net.splodgebox.monthlycrates.utils.XMaterial;
 import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.Bukkit;

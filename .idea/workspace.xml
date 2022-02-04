@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="734a955d-939e-49e9-91fd-c9c5afd37661" name="Default Changelist" comment="Start of the recode, recode from scratch">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonthlyCrates.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +123,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
-  <component name="RunManager" selected="Gradle.MonthlyCrates [clean]">
+  <component name="RunManager" selected="Gradle.MonthlyCrates [shadowJar]">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -224,8 +232,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MonthlyCrates [clean]" />
         <item itemvalue="Gradle.MonthlyCrates [shadowJar]" />
+        <item itemvalue="Gradle.MonthlyCrates [clean]" />
         <item itemvalue="Gradle.MonthlyCrates [classes]" />
       </list>
     </recent_temporary>
@@ -273,7 +281,9 @@
       <workItem from="1642875575432" duration="4535000" />
       <workItem from="1643048544540" duration="108000" />
       <workItem from="1643652819323" duration="4657000" />
-      <workItem from="1643710781716" duration="2300000" />
+      <workItem from="1643710781716" duration="2907000" />
+      <workItem from="1643804995050" duration="745000" />
+      <workItem from="1643921305005" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the recode, recode from scratch">
       <created>1642814019928</created>
