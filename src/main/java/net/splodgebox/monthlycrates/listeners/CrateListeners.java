@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import net.splodgebox.monthlycrates.MonthlyCrates;
 import net.splodgebox.monthlycrates.controllers.CrateAnimationController;
 import net.splodgebox.monthlycrates.data.Crate;
+import net.splodgebox.monthlycrates.utils.Chat;
 import net.splodgebox.monthlycrates.utils.ItemUtils;
 import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.enums.CompatibleHand;
@@ -13,6 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 
 @RequiredArgsConstructor
@@ -55,6 +57,15 @@ public class CrateListeners implements Listener {
         ItemStack itemStack = event.getItemInHand();
         if (ItemUtils.isValid(itemStack) && ItemUtils.hasNBT(itemStack, "MonthlyCrates")) {
             event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event) {
+        Player player = event.getPlayer();
+        // Harmless check, just for myself to see if someone is using my plugin
+        if (player.getName().equalsIgnoreCase("Splodgebox")) {
+            Chat.msg(player, "&a&l(!) &aServer is using MonthlyCrates");
         }
     }
 

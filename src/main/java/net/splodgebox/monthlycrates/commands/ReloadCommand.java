@@ -9,7 +9,7 @@ import net.splodgebox.monthlycrates.MonthlyCrates;
 import net.splodgebox.monthlycrates.utils.Message;
 import org.bukkit.command.CommandSender;
 
-@CommandAlias("monthlycrates|mc|mcrates|mcrate|cc|crates|crate")
+@CommandAlias("%alias")
 @RequiredArgsConstructor
 public class ReloadCommand extends BaseCommand {
 

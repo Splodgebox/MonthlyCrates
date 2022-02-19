@@ -6,7 +6,7 @@ import co.aikar.commands.annotation.Default;
 import net.splodgebox.monthlycrates.utils.Chat;
 import org.bukkit.command.CommandSender;
 
-@CommandAlias("monthlycrates|mc|mcrates|mcrate|cc|crates|crate")
+@CommandAlias("%alias")
 public class HelpCommand extends BaseCommand {
 
     @Default
@@ -22,7 +22,7 @@ public class HelpCommand extends BaseCommand {
                 "&6<> &7- &fRequire Argument",
                 "&e[] &7- &fOptional Argument",
                 "",
-                "&6&lAliases: &e<monthlycrates|mc|mcrates|mcrate|cc|crates|crate>");
+                "&6&lAliases: &e<monthlycrates|mc|mcrates|mcrate>");
     }
 
 }

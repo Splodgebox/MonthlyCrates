@@ -12,7 +12,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-@CommandAlias("monthlycrates|mc|mcrates|mcrate|cc|crates|crate")
+@CommandAlias("%alias")
 public class AddRewardCrateCommand extends BaseCommand {
 
     @Subcommand("addreward")

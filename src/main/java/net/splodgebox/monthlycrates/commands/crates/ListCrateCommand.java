@@ -10,7 +10,7 @@ import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandAlias("monthlycrates|mc|mcrates|mcrate|cc|crates|crate")
+@CommandAlias("%alias")
 @RequiredArgsConstructor
 public class ListCrateCommand extends BaseCommand {
 

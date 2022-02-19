@@ -1,6 +1,7 @@
 package net.splodgebox.monthlycrates;
 
 import co.aikar.commands.PaperCommandManager;
+import com.google.common.collect.Lists;
 import lombok.Getter;
 import net.splodgebox.monthlycrates.commands.HelpCommand;
 import net.splodgebox.monthlycrates.commands.ReloadCommand;
@@ -14,6 +15,8 @@ import net.splodgebox.monthlycrates.utils.Message;
 import net.splodgebox.monthlycrates.utils.Metrics;
 import net.splodgebox.monthlycrates.utils.gui.GuiListener;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.List;
 
 public final class MonthlyCrates extends JavaPlugin {
 
@@ -45,6 +48,21 @@ public final class MonthlyCrates extends JavaPlugin {
     public void registerCommands() {
         PaperCommandManager commandManager = new PaperCommandManager(this);
 
+        List<String> commands = Lists.newArrayList("mc",
+                "mcrate",
+                "monthlycrates",
+                "mcrates"
+        );
+
+        if (getConfig().contains("Command-Aliases")) {
+            commands = getConfig().getStringList("Command-Aliases");
+        }
+
+        String arg = "";
+        for (String command : commands) arg = arg + command + "|";
+        arg = arg.substring(0, arg.length()-1);
+
+        commandManager.getCommandReplacements().addReplacements("alias", arg);
         commandManager.registerCommand(new HelpCommand());
         commandManager.registerCommand(new ReloadCommand(this));
         commandManager.registerCommand(new GiveCrateCommand(this));

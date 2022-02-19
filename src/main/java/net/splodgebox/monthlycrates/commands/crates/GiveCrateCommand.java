@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 
 import java.util.stream.IntStream;
 
-@CommandAlias("monthlycrates|mc|mcrates|mcrate|cc|crates|crate")
+@CommandAlias("%alias")
 @RequiredArgsConstructor
 public class GiveCrateCommand extends BaseCommand {
 
