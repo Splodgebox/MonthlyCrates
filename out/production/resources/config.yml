@@ -1,8 +1,0 @@
-Display:
-  enabled: true
-
-Command-Aliases:
-  - 'mc'
-  - 'mcrate'
-  - 'monthlycrates'
-  - 'mcrates'
