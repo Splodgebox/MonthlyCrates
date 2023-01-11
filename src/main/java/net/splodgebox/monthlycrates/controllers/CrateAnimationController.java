@@ -1,5 +1,7 @@
 package net.splodgebox.monthlycrates.controllers;
 
+import com.cryptomorin.xseries.XMaterial;
+import com.cryptomorin.xseries.XSound;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.Getter;

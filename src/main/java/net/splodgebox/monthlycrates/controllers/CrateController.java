@@ -1,5 +1,6 @@
 package net.splodgebox.monthlycrates.controllers;
 
+import com.cryptomorin.xseries.XMaterial;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.Getter;
@@ -9,7 +10,6 @@ import net.splodgebox.monthlycrates.data.Reward;
 import net.splodgebox.monthlycrates.utils.FileManager;
 import net.splodgebox.monthlycrates.utils.ItemStackBuilder;
 import net.splodgebox.monthlycrates.utils.Pair;
-import net.splodgebox.monthlycrates.utils.XMaterial;
 import net.splodgebox.monthlycrates.utils.gui.Gui;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,10 +18,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CrateController {
@@ -58,6 +55,8 @@ public class CrateController {
                     config.getStringList(path + "lore"),
                     XMaterial.matchXMaterial(Objects.requireNonNull(config.getString(path + "material")))
                             .orElse(XMaterial.CHEST),
+                    config.getStringList(path + "nbt"),
+                    config.getInt(path + "customModelData", 0),
                     colors,
                     config.getInt(path + "animation.shuffle-time"),
                     config.getBoolean(path + "animation.duplicate-rewards"),
@@ -91,7 +90,9 @@ public class CrateController {
                     config.getStringList(path + "lore"),
                     enchants,
                     config.getStringList(path + "command"),
-                    config.getBoolean(path + "give-item")
+                    config.getBoolean(path + "give-item"),
+                    config.getStringList(path + "nbt"),
+                    config.getInt(path + "customModelData", 0)
             );
             rewards.add(new Pair<>(reward.getChance(), reward));
         }

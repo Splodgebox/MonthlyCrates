@@ -5,6 +5,7 @@ import net.splodgebox.monthlycrates.utils.enums.CompatibleHand;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemUtils {
 
@@ -24,6 +25,14 @@ public class ItemUtils {
         return nbtItem.getString(tag);
     }
 
+    public static ItemStack setCustomModelData(ItemStack itemStack, int model) {
+        ItemStack clone = itemStack;
+        ItemMeta itemMeta = clone.getItemMeta();
+        itemMeta.setCustomModelData(model);
+        clone.setItemMeta(itemMeta);
+
+        return clone;
+    }
 
     public static void takeActiveItem(Player player, CompatibleHand hand, int amount) {
         if (hand == CompatibleHand.MAIN_HAND) {
