@@ -46,13 +46,13 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-    compileOnly 'org.spigotmc:spigot-api:1.19.3-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
     compileOnly 'org.jetbrains:annotations:23.1.0'
 
     implementation "co.aikar:acf-paper:0.5.1-SNAPSHOT"
-    implementation group: 'de.tr7zw', name: 'item-nbt-api-plugin', version: '2.11.1'
+    implementation group: 'de.tr7zw', name: 'item-nbt-api-plugin', version: '2.12.1'
 
-    implementation "com.github.cryptomorin:XSeries:9.2.0"
+    implementation "com.github.cryptomorin:XSeries:9.7.0"
 }
 
 shadowJar {
