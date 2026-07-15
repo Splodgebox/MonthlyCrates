@@ -2,49 +2,53 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'com.gradleup.shadow' version '9.5.1'
 }
 
 group = pluginGroup
 version = pluginVersion
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 
 repositories {
     mavenCentral()
-    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
-    maven { url 'https://oss.sonatype.org/content/groups/public/' }
-    maven { url 'https://repo.aikar.co/content/groups/aikar/' }
-    maven { url 'https://jitpack.io' }
-    maven { url 'https://repo.codemc.org/repository/maven-public/' }
-    maven { url 'https://libraries.minecraft.net/' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url = 'https://oss.sonatype.org/content/groups/public/' }
+    maven { url = 'https://repo.aikar.co/content/groups/aikar/' }
+    maven { url = 'https://jitpack.io' }
+    maven { url = 'https://repo.codemc.io/repository/maven-public/' }
+    maven { url = 'https://libraries.minecraft.net/' }
 }
 
 dependencies {
     implementation 'co.aikar:acf-core:0.5.1-SNAPSHOT'
     implementation 'co.aikar:acf-paper:0.5.1-SNAPSHOT'
-    implementation 'de.tr7zw:item-nbt-api:2.13.2'
-    implementation 'com.github.cryptomorin:XSeries:11.3.0'
+    implementation 'de.tr7zw:item-nbt-api:2.15.7'
+    implementation 'com.github.cryptomorin:XSeries:13.7.1'
 
-    compileOnly 'org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT'
-    compileOnly 'com.mojang:authlib:1.5.21'
+    compileOnly 'org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT'
+    compileOnly 'com.mojang:authlib:6.0.54'
 
-    compileOnly 'org.projectlombok:lombok:1.18.26'
-    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.42'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
 }
 
 shadowJar {
-    relocate("co.aikar.commands", "net.splodgebox.monthlycrates.acf")
-    relocate("co.aikar.locales", "net.splodgebox.monthlycrates.acf.locales")
-    relocate("com.cryptomorin.xseries", "net.splodgebox.monthlycrates.utils.xseries")
-    relocate("de.tr7zw.changeme.nbtapi", "net.splodgebox.monthlycrates.utils.nbtapi")
+    archiveClassifier = ''
+    relocate 'co.aikar.commands', 'net.splodgebox.monthlycrates.acf'
+    relocate 'co.aikar.locales', 'net.splodgebox.monthlycrates.acf.locales'
+    relocate 'com.cryptomorin.xseries', 'net.splodgebox.monthlycrates.utils.xseries'
+    relocate 'de.tr7zw.changeme.nbtapi', 'net.splodgebox.monthlycrates.utils.nbtapi'
 }
 
 processResources {
     duplicatesStrategy = 'exclude'
-    from(sourceSets.main.resources.srcDirs) {
-        filter ReplaceTokens, tokens: [version: version]
+    filesMatching('**/plugin.yml') {
+        filter ReplaceTokens, tokens: [version: version.toString()]
     }
 }
 
